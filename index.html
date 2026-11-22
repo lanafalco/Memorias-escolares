@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="nocturno">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Última Volta — Alana | Memórias & Redações</title>
+    <meta name="description" content="Portfólio da Alana — Memórias do colégio e 17 redações produzidas entre 2014 e 2026.">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62.5..125,100..900&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        (function () {
+            const saved = localStorage.getItem('tema-portfolio');
+            document.documentElement.setAttribute('data-theme', saved || 'nocturno');
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- REGRA DE PROGRESSO DE VOLTA -->
+    <div class="volta-progresso" aria-hidden="true"><span id="volta-bar" class="volta-bar"></span></div>
+
+    <!-- CURSOR CUSTOM (só em dispositivos com ponteiro fino) -->
+
+    <!-- PRELOADER EM GRADE (referência: awards.racing) -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-grade" id="loader-grade" aria-hidden="true"></div>
+        <div class="loader-flag" aria-hidden="true"></div>
+        <div class="loader-inner">
+            <div class="loader-text">ACIONANDO OS MOTORES</div>
+            <div class="loader-pct" id="loader-pct">00</div>
+        </div>
+    </div>
+
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <header class="header">
+        <a href="#hero" class="logo">ALANA<span>.</span><sup>26</sup></a>
+        <nav class="nav-menu" aria-label="Navegação principal">
+            <a href="#timeline">Memórias</a>
+            <a href="#portfolio">Portfólio</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Mudar tema" title="Mudar tema">◐</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO — cena 3D de corrida -->
+        <section id="hero" class="hero">
+            <!-- speed lines -->
+            <div class="speed-lines" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="cena" id="cena">
+                <div class="sun" aria-hidden="true"></div>
+                <div class="grid-floor" aria-hidden="true"></div>
+                <div class="horizon" aria-hidden="true"></div>
+                <div class="word-bg" aria-hidden="true">PISTA</div>
+
+                <div class="hero-content">
+                    <div class="hero-tag"><i></i>PORTFÓLIO PESSOAL · 2014—2026</div>
+                    <h1 id="hero-title" class="hero-title">Última<br>Volta</h1>
+                    <p id="hero-subtitle" class="hero-subtitle">
+                        Doze anos de escola vividos como uma grande corrida.<br>
+                        <em>Do prézinho à bandeira xadrez.</em>
+                    </p>
+                    <div class="hero-specs" aria-hidden="true">
+                        <span>12 ANOS</span><i>/</i><span>3 FASES</span><i>/</i><span>17 REDAÇÕES</span><i>/</i><span>1 HISTÓRIA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                <span class="hero-scroll-label">Role para acelerar</span>
+                <div class="scroll-linha"></div>
+            </div>
+
+            <div class="hero-faixa-bandeira" aria-hidden="true"></div>
+        </section>
+
+        <!-- MARQUEE DUPLO -->
+        <div class="marquee-stack" aria-hidden="true">
+            <div class="editorial-marquee faixa-vermelha">
+                <div class="marquee-track">
+                    <span>ÚLTIMA VOLTA ✦ ALANA ✦ COLÉGIO ESTADUAL PADRE CLAUDIO MORELLI ✦</span><span>ÚLTIMA VOLTA ✦ ALANA ✦ COLÉGIO ESTADUAL PADRE CLAUDIO MORELLI ✦</span>
+                </div>
+            </div>
+            <div class="editorial-marquee">
+                <div class="marquee-track faixa-rev">
+                    <span>17 REDAÇÕES ✦ MEMÓRIAS ESCOLARES ✦ 2014—2026 ✦</span><span>17 REDAÇÕES ✦ MEMÓRIAS ESCOLARES ✦ 2014—2026 ✦</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEMÓRIAS -->
+        <section id="timeline" class="timeline-section">
+            <span class="section-index reveal">[ 01 / MEMÓRIAS ]</span>
+            <h2 class="section-title reveal">Minha<br>Trajetória</h2>
+            <p class="section-subtitle reveal">Um resgate cronológico dos momentos inesquecíveis da vida escolar.</p>
+
+            <div class="timeline-wrapper">
+                <div class="timeline-pin">
+                    <div class="timeline-track" id="timeline-track"></div>
+                </div>
+            </div>
+
+            <div class="timeline-nav reveal">
+                <button class="nav-year active" data-fase="pre-escola"><span>01</span> Pré-escola</button>
+                <button class="nav-year" data-fase="fundamental"><span>02</span> Fundamental</button>
+                <button class="nav-year" data-fase="ensino-medio"><span>03</span> Ensino Médio</button>
+            </div>
+        </section>
+
+        <!-- PORTFÓLIO -->
+        <section id="portfolio" class="portfolio-section">
+            <span class="section-index reveal">[ 02 / REDAÇÕES ]</span>
+            <h2 class="section-title reveal">Portfólio de Redações</h2>
+            <p class="section-subtitle reveal">17 produções textuais que contam a história dos meus estudos.</p>
+
+            <div class="portfolio-topo reveal">
+                <span class="etiqueta">CONSULTA AO ACERVO</span>
+                <span class="contador"><strong id="contador-pecas">17</strong> redação(ões)</span>
+            </div>
+
+            <div class="controles reveal">
+                <div class="search-wrap">
+                    <span class="search-icone" aria-hidden="true">⌕</span>
+                    <input type="text" id="search-input" class="search-input" placeholder="Buscar título ou tema..." aria-label="Buscar peças">
+                    <span class="search-dica" id="search-hint"></span>
+                </div>
+
+                <div class="controles-meio">
+                    <div class="ordenar">
+                        <label for="sort-select">Ordenar por:</label>
+                        <select id="sort-select" class="ordem-select">
+                            <option value="default">Ordem original</option>
+                            <option value="titulo">Título (A→Z)</option>
+                            <option value="tempo">Leitura</option>
+                        </select>
+                    </div>
+                    <div class="view-toggle" role="group" aria-label="Modo de visualização">
+                        <button class="view-btn active" data-view="grid" aria-pressed="true">▦ Grade</button>
+                        <button class="view-btn" data-view="list" aria-pressed="false">☰ Lista</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="redacoes-grid" class="redacoes-grid"></div>
+        </section>
+    </main>
+
+    <div class="hero-faixa-bandeira baixo" aria-hidden="true"></div>
+
+    <!-- MODAL -->
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close" aria-label="Fechar">✕</button>
+            <div class="modal-header">
+                <span class="modal-numero" id="modal-numero">01</span>
+                <h3 id="modal-title" class="modal-title">[ Título ]</h3>
+                <p id="modal-tema" class="modal-tema">[ Tema ]</p>
+                <div class="modal-meta"><span id="modal-tempo" class="modal-tempo">Leitura: 0 min</span></div>
+            </div>
+            <div id="modal-text" class="modal-text" role="textbox" readonly></div>
+            <div class="modal-page-indicator" id="modal-page-indicator">1 de 1</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-frase">"A última volta não termina a corrida — ela abre a estrada."</p>
+        <p class="footer-credit">Alana · Colégio Estadual Padre Claudio Morelli · 2014—2026</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+
+    <script>
+        window.addEventListener('load', () => {
+            if (typeof Lenis === 'undefined' || typeof gsap === 'undefined') {
+                document.documentElement.style.overflow = 'auto';
+                document.body.style.overflow = 'auto';
+                const loader = document.getElementById('page-loader');
+                if (loader) loader.remove();
+            }
+        });
+    </script>
+
+    <!-- DADOS DO MOLDE — edite isto -->
+    <script src="js/script.js"></script>
+</body>
+</html>
